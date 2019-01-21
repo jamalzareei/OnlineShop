@@ -37,7 +37,22 @@
 
         <tr>
             <td> {{ $post->name }} </td>
-            <td> {{ $post->type }} </td>
+            <td> 
+            @if($post->type == 1) 
+            چرم گاو
+            @elseif($post->type == 2)
+            چرم گاومیش
+            @elseif($post->type == 2)
+            پلاستیک
+            @elseif($post->type == 3)
+            نانو
+            @elseif($post->type == 4)
+            کتان
+            @elseif($post->type == 5)
+            چرم خر :D
+            @endif
+            
+            </td>
             <td> {{ $post->price }} </td>
             <td> {{ $post->count }} </td>
             <td> {{ $post->description }} </td>
